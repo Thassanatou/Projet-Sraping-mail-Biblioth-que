@@ -9,7 +9,7 @@ soup = b(html, "html.parser")
 # exporter le fichier comme csv
 file = open('bibliotheque_ile_de_france.csv', 'w+')
 writer = csv.writer(file)
-# le premier ligne
+# la premiere ligne
 writer.writerow(['DEPARTEMENT', 'VILLE', 'ADRESSE', 'CP' ,'E-MAIL'])
 #selectionne les données qui correspondent à la region îles de France par "id" puis par "li"
 for region in soup.find("div", {"id" : "bibliotheque_11_content"}):
